@@ -209,7 +209,17 @@ var deleteTask = function(taskId) {
 var saveTasks = function() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
+// 1) get Task Items from localStorage
+// 2) Converts Tasks from string format back to an array of objects
+// 3) iterates through a task array and creates task elements on the page from it :) 
 
+
+// THIS IS WHERE I LEFT OFF
+var loadTasks = function {
+  let saveTasks = localStorage.getItem('tasks');
+  saveTasks
+ console.log('TASKSlOaDiNG!!')
+ };
 // Create a new task
 formEl.addEventListener("submit", taskFormHandler);
 
@@ -218,3 +228,5 @@ pageContentEl.addEventListener("click", taskButtonHandler);
 
 // for changing the status
 pageContentEl.addEventListener("change", taskStatusChangeHandler);
+
+loadTasks()
