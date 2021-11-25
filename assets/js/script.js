@@ -215,10 +215,12 @@ var saveTasks = function() {
 
 
 // THIS IS WHERE I LEFT OFF
-var loadTasks = function {
-  let saveTasks = localStorage.getItem('tasks');
-  saveTasks
- console.log('TASKSlOaDiNG!!')
+var loadTasks = function() {
+  var savedTasks = localStorage.getItem("tasks");
+  console.log('yup')
+  // if there are no tasks, set tasks to an empty array and return out of the function
+  if (!savedTasks) {
+    return false;
  };
 // Create a new task
 formEl.addEventListener("submit", taskFormHandler);
@@ -230,3 +232,4 @@ pageContentEl.addEventListener("click", taskButtonHandler);
 pageContentEl.addEventListener("change", taskStatusChangeHandler);
 
 loadTasks()
+};
